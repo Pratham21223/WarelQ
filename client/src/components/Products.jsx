@@ -8,7 +8,7 @@ import CreateProductModal from '../components/products/CreateProductModal';
 import ProductDetailsModal from '../components/products/ProductDetailsModal';
 import ProductFilters from '../components/products/ProductFilters';
 
-const API_BASE_URL = 'http://localhost:5000/api';
+const API_BASE_URL = 'https://wareiqserver.vercel.app/api';
 
 export default function Products() {
   const [products, setProducts] = useState([]);
