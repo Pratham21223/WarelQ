@@ -1,6 +1,5 @@
 // src/services/deliveryApi.js
-const API_BASE_URL = 'http://localhost:5000/api';
-
+const API_BASE_URL = 'https://wareiqserver.vercel.app/api';
 // Helper function for error handling
 const handleResponse = async (response) => {
   if (!response.ok) {
