@@ -13,7 +13,7 @@ export default function Homepage() {
             <a href="/dashboard" className="hover:text-blue-600 transition">Dashboard</a>
           </li>
           <li>
-            <a href="/deliveries" className="hover:text-blue-600 transition">Deliveries</a>
+            <a href="/delivery" className="hover:text-blue-600 transition">Deliveries</a>
           </li>
           <li>
             <a href="/products" className="hover:text-blue-600 transition">Products</a>

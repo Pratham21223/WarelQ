@@ -48,7 +48,8 @@ function App() {
             <Routes>
               <Route path="/" element={<Navigate to="/dashboard" replace />} />
               <Route path="/dashboard" element={<Dashboard />} />
-              <Route path="/receipts" element={<Receipts />} />
+              <Rou
+              te path="/receipts" element={<Receipts />} />
               <Route path="/deliveries" element={<Deliveries />} />
               <Route path="/products" element={<Products />} />
               <Route path="*" element={<Navigate to="/dashboard" replace />} />
