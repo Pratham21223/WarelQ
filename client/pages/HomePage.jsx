@@ -13,13 +13,13 @@ export default function Homepage() {
             <a href="/dashboard" className="hover:text-blue-600 transition">Dashboard</a>
           </li>
           <li>
-            <a href="#about" className="hover:text-blue-600 transition">About</a>
+            <a href="/deliveries" className="hover:text-blue-600 transition">Deliveries</a>
           </li>
           <li>
-            <a href="#features" className="hover:text-blue-600 transition">Features</a>
+            <a href="/products" className="hover:text-blue-600 transition">Products</a>
           </li>
           <li>
-            <a href="#howitworks" className="hover:text-blue-600 transition">How it works</a>
+            <a href="/receipts" className="hover:text-blue-600 transition">Receipts</a>
           </li>
         </ul>
         <div className="flex gap-2 items-center">
