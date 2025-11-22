@@ -1,0 +1,36 @@
+/* src/index.css */
+@import "tailwindcss";
+
+/* Import Google Font */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+/* Theme Configuration using @theme directive */
+@theme {
+  --font-sans: 'Inter', system-ui, sans-serif;
+  
+  /* Custom breakpoints if needed */
+  --breakpoint-xs: 475px;
+  
+  /* Custom animations */
+  --animate-pulse-slow: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Global Styles */
+/* body {
+  @apply bg-gray-50 dark:bg-gray-900 text-gray-900 dark:text-white transition-colors duration-200;
+} */
+
+body {
+  @apply bg-gray-50 text-gray-900;
+  font-family: 'Inter', system-ui, sans-serif;
+}
+
+/* Custom utilities */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
