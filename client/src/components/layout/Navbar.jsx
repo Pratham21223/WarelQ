@@ -1,6 +1,8 @@
 import { Bars3Icon, BellIcon, MagnifyingGlassIcon, UserCircleIcon } from '@heroicons/react/24/outline';
 import { motion } from 'framer-motion';
-
+import { useUser, UserButton } from '@clerk/clerk-react'
+import { useNavigate } from 'react-router-dom'
+import { useEffect } from 'react'
 export default function Navbar({ toggleSidebar, isSidebarOpen }) {
   return (
     <nav className="bg-white border-b border-gray-200 shadow-sm px-6 py-4 w-full transition-all duration-300">
@@ -37,11 +39,7 @@ export default function Navbar({ toggleSidebar, isSidebarOpen }) {
 
           {/* User Profile */}
           <div className="flex items-center gap-3 pl-4 border-l border-gray-300">
-            <div className="text-right">
-              <p className="text-sm font-semibold text-gray-900">John Doe</p>
-              <p className="text-xs text-gray-500">Manager</p>
-            </div>
-            <UserCircleIcon className="w-10 h-10 text-gray-400" />
+            <UserButton afterSignOutUrl="/signin" />
           </div>
         </div>
       </div>

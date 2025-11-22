@@ -3,7 +3,7 @@ import { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Menu } from '@headlessui/react';
 import { MagnifyingGlassIcon, BellIcon } from '@heroicons/react/24/outline';
-
+import { useUser, UserButton } from '@clerk/clerk-react'
 const TopBar = () => {
   const [notifications, setNotifications] = useState(3);
   const [showNotificationPing, setShowNotificationPing] = useState(true);
@@ -51,64 +51,9 @@ const TopBar = () => {
           </motion.button>
 
           {/* User Menu */}
-          <Menu as="div" className="relative">
-            <Menu.Button className="flex items-center space-x-3 p-2 rounded-lg hover:bg-gray-100 transition-colors">
-              <div className="w-10 h-10 bg-gradient-to-br from-green-400 to-blue-500 rounded-full flex items-center justify-center shadow-md">
-                <span className="text-white font-semibold">JD</span>
-              </div>
-              <div className="text-left hidden md:block">
-                <p className="text-sm font-semibold text-gray-700">John Doe</p>
-                <p className="text-xs text-gray-500">Manager</p>
-              </div>
-            </Menu.Button>
-
-            <AnimatePresence>
-              <Menu.Items
-                as={motion.div}
-                initial={{ opacity: 0, y: -10 }}
-                animate={{ opacity: 1, y: 0 }}
-                exit={{ opacity: 0, y: -10 }}
-                className="absolute right-0 mt-2 w-48 bg-white rounded-lg shadow-lg border border-gray-200 py-2"
-              >
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={`block px-4 py-2 text-sm ${
-                        active ? 'bg-gray-100' : ''
-                      } text-gray-700`}
-                    >
-                      Profile
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={`block px-4 py-2 text-sm ${
-                        active ? 'bg-gray-100' : ''
-                      } text-gray-700`}
-                    >
-                      Settings
-                    </a>
-                  )}
-                </Menu.Item>
-                <Menu.Item>
-                  {({ active }) => (
-                    <a
-                      href="#"
-                      className={`block px-4 py-2 text-sm ${
-                        active ? 'bg-gray-100' : ''
-                      } text-red-600`}
-                    >
-                      Logout
-                    </a>
-                  )}
-                </Menu.Item>
-              </Menu.Items>
-            </AnimatePresence>
-          </Menu>
+          <div className="flex items-center gap-3 pl-4 border-l border-gray-300">
+            <UserButton afterSignOutUrl="/signin" />
+          </div>
         </div>
       </div>
     </header>
