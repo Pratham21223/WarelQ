@@ -1,0 +1,1 @@
+wareiq.vercel.app
